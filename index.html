@@ -2,12 +2,13 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Portfólio – Sistema Fiscal Fácil</title>
+  <title>Portfólio – Sistema SOLUÇÃO ERP</title>
   <link rel="icon" type="image/png" href="imagens/favicon.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link
+  <link
   rel="stylesheet"
   href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  
 />
   <style>
     .layout {
@@ -16,13 +17,12 @@
   justify-content: space-between;
   gap: 20px;
   padding: 20px;
-
-
-  
 }
+
+
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 50px;
+      scroll-padding-top: 180px;
     }
 
     body {
@@ -30,9 +30,10 @@
       line-height: 1.6;
       padding: 0;
       background: #f9f9f9;
-      padding-top: 150px; /* Compensa header fixo */
+      padding-top: 175px; /* Compensa header fixo */
     }
-    
+
+    /* Cabeçalho fixo */
     header {
       position: fixed;
       top: 0;
@@ -53,10 +54,10 @@
     .header-content img {
       max-width: 200px;
       height: auto;
-      cursor: pointer;
       margin-bottom: 0px;
+      cursor: pointer;
     }
-
+/* cabeçalho "portfolio de funcionalidades" */
     .header-content h1 {
       margin: 0;
       padding: 6px 16px;
@@ -65,29 +66,32 @@
       border-radius: 4px;
       font-size: 1.2em;
     }
+    
+    
 
-
+    /* Botão de menu (mobile) */
     #menu-toggle {
-      display: none;
-      position: fixed;
-      top: 20px;
-      left: 20px;
-      z-index: 1100;
-      background-color: #a70808;
-      color: white;
-      border: none;
-      padding: 10px 14px;
-      font-size: 20px;
-      border-radius: 6px;
-      cursor: pointer;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+  background-color: #a70808;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  font-size: 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
 
     #menu-toggle:hover {
-      background-color: #870606;
+      background-color: #a70808;
     }
 
-    nav#indice {
+    /* Menu lateral */
+   nav#indice {
   position: fixed;
   top: 180px;
   left: 0;
@@ -101,6 +105,7 @@
   z-index: 1000;
   font-family: 'Segoe UI', sans-serif;
   border-radius: 0 12px 12px 0;
+   
 }
 
 nav#indice h2 {
@@ -143,33 +148,22 @@ nav#indice ul li a span.icon {
   width: 24px;
   text-align: center;
 }
-footer {
-      background: #a70808;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      font-weight: normal;
 
-    }
+    /* Conteúdo */
+ 
+
     .feature {
       background: #ffffff;
       margin: 0 0 20px 0;
       padding: 20px;
       border-top: 1px solid #ddd;
       border-bottom: 1px solid #ddd;
+      border-radius: 0;
+      box-shadow: none;
     }
 
     .feature h3 {
       color: #a70808;
-    }
-
-    .feature h3::before {
-      content: "";
-      display: block;
-      height: 180px;
-      margin-top: -180px;
-      visibility: hidden;
     }
 
     .feature img:not(.imagem-app) {
@@ -179,76 +173,25 @@ footer {
       border-radius: 8px;
     }
 
-   
-    section {
-      margin-left: 250px;
-      padding: 0px;
-      margin-right: 230px; /* igual ou maior que a largura do card */
-
+    footer {
+      background: #a70808;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
-
-
-    @media (max-width: 768px) {
-      nav#indice {
-        left: -270px;
-      }
-
-      nav#indice.open {
-        left: 0;
-      }
-section {
-    margin: 0;
-    padding: 20px 24px; /* 24px nas laterais para dar respiro */
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  
-
-  }
-body.menu-open section {
-    margin-left: 0; /* Reposiciona o conteúdo quando o menu está aberto */
-  }
-    body {
-    padding-top: 195px !important;
-  }
-
-      #menu-toggle {
-        display: block;
-      }
-
-      body.menu-open {
-        overflow: hidden;
-      }
-
-      
-    }
-    @media (max-width: 768px) {
-  .layout {
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
-  }
-}
-
-   
 .titulo-sistema {
- margin-left: 20px;
+  margin-left: 20px;
   color: #a70808;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   display: flex;
   align-items: center;
   gap: 10px;
   line-height: 1.2;
+
 }
 
-.titulo-sistema i {
-  font-size: 24px;
-  vertical-align: middle;
-  
-}
+
 @media (max-width: 768px) {
   .titulo-sistema {
     font-size: 18px;
@@ -267,8 +210,111 @@ body.menu-open section {
     vertical-align: middle;
   }
 }
-/* CardFF Wrapper */
-.cardff-wrapper {
+
+
+    section {
+  margin-left: 250px; /* igual ou maior que a largura do menu */
+  padding: 0px;
+  margin-right: 230px; /* igual ou maior que a largura do card */
+
+  
+}
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      nav#indice {
+        left: -270px;
+        transition: left 0.3s ease;
+      }
+
+      nav#indice.open {
+        left: 0;
+      }
+
+      #menu-toggle {
+        display: block;
+      }
+
+      body.menu-open {
+        overflow: hidden;
+      }
+
+    section {
+   margin: 0;
+    padding: 20px 24px; /* 24px nas laterais para dar respiro */
+    width: 100%;
+    max-width: 100%;
+    box-sizing: content-box;
+    margin-left: -20px;
+    margin-right: -20px;
+
+      }
+    }
+    @media print {
+  header {
+    position: static !important;
+    box-shadow: none;
+  }
+
+  body {
+    padding-top: 0 !important;
+    
+  }
+
+  nav#indice {
+    position: static !important;
+    height: auto !important;
+    box-shadow: none;
+    border: none;
+    margin-bottom: 20px;
+  }
+
+ 
+  section {
+  transition: margin-left 0.3s ease;
+}
+body.menu-open section {
+    margin-left: 250px; /* Reposiciona o conteúdo quando o menu está aberto */
+    
+  }
+
+  #menu-toggle {
+    display: none !important;
+  }
+}
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 180px;
+}
+
+
+    /* Botão 💰 (direita) */
+    #erp-toggle {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1100;
+      background-color: #a70808;
+      color: white;
+      border: none;
+      padding: 10px 14px;
+      font-size: 20px;
+      width: 48px;
+      height: 48px;
+      border-radius: 6px;
+      cursor: pointer;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    #erp-toggle:hover {
+      background-color: #8a0606;
+    }
+
+    /* Card ERP */
+    .erp-wrapper {
   position: fixed;
   top: 192px; /* igual ao menu */
   right: 0;
@@ -279,27 +325,30 @@ body.menu-open section {
   box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
   border-radius: 12px 0 0 12px;
   background-color: #a70808;
-}
 
-.cardff-wrapper.collapsed {
-  right: 0;
-}
+      
+    }
 
-@media (max-width: 768px) {
-  .cardff-wrapper {
-    right: -330px;
+    .erp-wrapper.collapsed {
+      right: 0;
+    }
+    @media (max-width: 768px) {
+  .erp-wrapper {
+    right: -320px;
     
   }
-
-  .cardff-wrapper.open {
+  .erp-wrapper.open {
     right: 0;
   }
 
-  .cardff-wrapper.collapsed {
+  erp-wrapper.collapsed {
     right: 0;
   }
 
-  #cardff-toggle {
+}
+
+    @media (max-width: 768px) {
+  #erp-toggle {
     display: flex;
     position: fixed;
     top: 20px;
@@ -315,13 +364,13 @@ body.menu-open section {
     border-radius: 6px;
     cursor: pointer;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    display: flex;
     align-items: center;
     justify-content: center;
   }
-}
+    }
 
-/* CardFF Visual */
-.cardff-card {
+    .erp-card {
       width: 100%;
       background-color: #a70808;
       color: white;
@@ -329,35 +378,68 @@ body.menu-open section {
       border-radius: 12px 0 0 12px;
       text-align: center;
       box-shadow: -4px 0 10px rgba(0, 0, 0, 0.2);
-      line-height: 1.3;
+       line-height: 1.3;
+       font-weight: bold;
+       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+       height: 100%;
+       box-sizing: border-box;
+
+
+    }
+
+    .erp-card h1 {
+      background-color: #ee0c0c;
+      padding: 12px;
+      border-radius: 6px;
+      font-size: 20px;
+      margin-bottom: 10px;
       font-weight: bold;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      height: 100%;
-      box-sizing: border-box;
-  
-  
-}
+    }
 
-/* Título opcional */
-.cardff-title {
-  display: block;
-  background-color: #ee0c0c;
-  color: white;
-  text-decoration: none;
-  padding: 12px;
-  border-radius: 6px;
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 8px 0 16px;
+    }
 
-.cardff-title:hover {
-  background-color: #c40b0b;
-}
+    .cta {
+      background-color: #ee0c0c;
+      padding: 10px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 16px 0;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      font-size: 14px;
+    }
 
-/* Botões */
-.cardff-link,
-.cardff-cta {
+    .cta:hover {
+      background-color: #9a1a1a;
+    }
+
+    .erp-card ul {
+      margin-top: 10px;
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    .erp-card ul li {
+      margin: 6px 0;
+      padding-left: 14px;
+      position: relative;
+      font-size: 18px;
+
+    }
+
+    .erp-card ul li::before {
+      content: '✔';
+      position: absolute;
+      left: 0;
+      color: #4caf50;
+      font-weight: bold;
+    }
+    .cta {
   display: inline-block;
   background-color: #ee0c0c;
   color: white;
@@ -371,39 +453,43 @@ body.menu-open section {
   font-size: 16px;
 }
 
-.cardff-link:hover,
-.cardff-cta:hover {
+.cta:hover {
+  background-color: #9a1a1a;
+}
+ .ERP {
+  display: inline-block;
+  background-color: #ee0c0c;
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-weight: bold;
+  margin: 20px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 16px;
+  
+}
+
+.ERP:hover {
   background-color: #9a1a1a;
 }
 
-/* Preço */
-.cardff-price {
-  font-size: 22px;
+
+.erp-title {
+  display: block;
+  background-color: #ee0c0c;
+  color: white;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 20px;
   font-weight: bold;
-  margin: 8px 0 16px;
+  margin-bottom: 10px;
 }
 
-/* Lista */
-.cardff-card ul {
-  margin-top: 10px;
-  list-style: none;
-  padding: 0;
-  text-align: left;
-}
-
-.cardff-card ul li {
-  margin: 6px 0;
-  padding-left: 14px;
-  position: relative;
-  font-size: 18px;
-}
-
-.cardff-card ul li::before {
-  content: '✔';
-  position: absolute;
-  left: 0;
-  color: #4caf50;
-  font-weight: bold;
+.erp-title:hover {
+  background-color: #c40b0b;
 }
 .imagem-app {
   max-width: 300px;      /* controla o tamanho máximo */
@@ -448,260 +534,413 @@ body.menu-open section {
 
 
 
-
-  </style>
+</style>
 </head>
 <body>
   <button id="btn-topo" title="Voltar ao topo">
   <i class="fas fa-arrow-up"></i>
 </button>
+  <!-- Cabeçalho -->
   <header id="topo">
     <div class="header-content">
       <a href="#" onclick="scrollToTop(); return false;">
-        <img src="imagens/LOGO.png" alt="Logo da Empresa">
+        <img src="imagens/LOGO4.png" alt="Logo da Empresa">
       </a>
       <h1>Portfólio de Funcionalidades</h1>
     </div>
   </header>
-<button id="cardff-toggle">
+  <!-- Botão de card (mobile) -->
+<button id="erp-toggle">
   <i class="fa-solid fa-dollar-sign"></i>
 </button>
-  <button id="menu-toggle">☰</button>
 
+
+
+
+  <!-- Botão de menu (mobile) -->
+  <button id="menu-toggle" onclick="toggleMenu()">☰</button>
+
+  <!-- Menu lateral -->
   <nav id="indice">
   <h2><i class="fa-solid fa-list-check"></i> Recursos Disponíveis</h2>
-    <ul>
-      <li><a href="#cadastros"><span class="icon"><i class="fa-solid fa-pen-to-square"></i></span> Cadastros</a></li>
-      <li><a href="#vendas"><span class="icon"><i class="fa-solid fa-cart-arrow-down"></i></span> Tela de Vendas</a></li>
-      <li><a href="#financeiro"><span class="icon"><i class="fa-solid fa-money-bill-transfer"></i></span> Controle Financeiro</a></li>
-      <li><a href="#faturamento"><span class="icon"><i class="fa-solid fa-shop"></i></span> Faturamento</a></li>
-      <li><a href="#notas"><span class="icon"><i class="fa-solid fa-copy"></i></span> Tipos de Notas</a></li>
-      <li><a href="#app"><i class="fa-solid fa-mobile-screen-button"></i></span> Acesso pelo celular</a></li>
-      <li><a href="#estoque"><span class="icon"><i class="fa-solid fa-boxes-stacked"></i></span> Estoque</a></li>
-      <li><a href="#entrada"><span class="icon"><i class="fa-solid fa-file-arrow-down"></i></span> Entrada de Produtos</a></li>
-      <li><a href="#nfrecebidas"><span class="icon"><i class="fa-solid fa-file-circle-check"></i></span> Notas Recebidas</a></li>
-      <li><a href="#xml"><span class="icon"><i class="fa-solid fa-upload"></i></span> Envio de XML</a></li>
-      <li><a href="#publico"><span class="icon"><i class="fa-solid fa-users-viewfinder"></i></span> Público-Alvo</a></li>
-    </ul>
-  </nav>
- <div class="layout">
+  <ul>
+    <li><a href="#cadastros"><span class="icon"><i class="fa-solid fa-pen-to-square"></i></span> Cadastros</a></li>
+    <li><a href="#busca"><span class="icon"><i class="fa-solid fa-magnifying-glass-chart"></i></span> Busca de Dados</a></li>
+    <li><a href="#boletos"><span class="icon"><i class="fa-solid fa-barcode"></i></span> Emissão de Boletos</a></li>
+    <li><a href="#financeiro"><span class="icon"><i class="fa-solid fa-money-bill-transfer"></i></span> Controle Financeiro</a></li>
+    <li><a href="#creditos"><span class="icon"><i class="fa-solid fa-hand-holding-dollar"></i></span> Créditos</a></li>
+    <li><a href="#notas"><span class="icon"><i class="fa-solid fa-copy"></i></span> Tipos de Notas</a></li>
+    <li><a href="#importacao"><span class="icon"><i class="fa-solid fa-file-arrow-down"></i></span> Importação de Notas</a></li>
+    <li><a href="#multiplos"><span class="icon"><i class="fa-solid fa-layer-group"></i></span> Notas Múltiplas</a></li>
+    <li><a href="#arquivos"><i class="fa-solid fa-paper-plane"></i></span> Envio de arquivos</a></li>
+    <li><a href="#app"><i class="fa-solid fa-mobile-screen-button"></i></span> Acesso pelo celular</a></li>
+    <li><a href="#estoque"><span class="icon"><i class="fa-solid fa-boxes-stacked"></i></span> Estoque</a></li>
+    <li><a href="#minimo"><span class="icon"><i class="fa-solid fa-triangle-exclamation"></i></span> Estoque Mínimo</a></li>
+    <li><a href="#composto"><span class="icon"><i class="fa-solid fa-shapes"></i></span> Produto Composto</a></li>
+    <li><a href="#tabela"><span class="icon"><i class="fa-solid fa-dollar-sign"></i></span> Tabela de Preços</a></li>
+    <li><a href="#vendas"><span class="icon"><i class="fa-solid fa-cart-arrow-down"></i></span> Venda PDV</a></li>
+    <li><a href="#consignada"><span class="icon"><i class="fa-solid fa-handshake"></i></span> Venda Consignada</a></li>
+    <li><a href="#futura"><span class="icon"><i class="fa-solid fa-hourglass-start"></i></span> Venda Futura</a></li>
+    <li><a href="#rota"><span class="icon"><i class="fa-solid fa-truck-ramp-box"></i></span> Rota de Entregas</a></li>
+    <li><a href="#etiquetas"><span class="icon"><i class="fa-solid fa-tags"></i></span> Etiquetas</a></li>
+    <li><a href="#aniversariantes"><span class="icon"><i class="fa-solid fa-cake-candles"></i></span> Aniversariantes</a></li>
+    <li><a href="#executor"><span class="icon"><i class="fa-solid fa-screwdriver-wrench"></i></span> Executor</a></li>
+    <li><a href="#contratos"><span class="icon"><i class="fa-solid fa-file-invoice-dollar"></i></span> Contratos</a></li>
+    <li><a href="#pontuacao"><span class="icon"><i class="fa-solid fa-star"></i></span> Pontuação</a></li>
+    <li><a href="#vendasrel"><span class="icon"><i class="fa-solid fa-chart-line"></i></span> Relatórios de Vendas</a></li>
+    <li><a href="#publico"><span class="icon"><i class="fa-solid fa-users-viewfinder"></i></span> Público-Alvo</a></li>
+  </ul>
+</nav>
+  <!-- CONTEÚDO -->
+  <div class="layout">
   <section>
-  <h2 class="titulo-sistema"><i class="fa-solid fa-brain"></i> Sistema FISCAL FÁCIL</h2>
-  <div class="feature">
-    <h3 id="cadastros"><i class="fa-solid fa-users"></i> Cadastros Disponíveis com busca de CEP e consulta de CPF/CNPJ para Clientes e Fornecedores</h3>
-      <ul><li><strong>Clientes/Fornecedores</strong></li></ul>
-      <img src="imagens/CLIENTESFF.gif" alt="Cadastro de Clientes">
-      <ul><li><strong>Produtos/Serviços</strong></li></ul>
-      <img src="imagens/PRODUTOSFF.png" alt="Cadastro de Produtos">
-      <ul><li><strong>Condutores/Motoristas</strong></li></ul>
-      <img src="imagens/CONDUTORESFF.png" alt="Cadastro de Condutores">
-      <ul><li><strong>Intermediador</strong></li></ul>
-      <img src="imagens/INTERMEDIADOR.png" alt="Cadastro de Intermediador">
-      <ul><li><strong>Transportadoras</strong></li></ul>
-      <img src="imagens/TRANSPORTADORA.png" alt="Cadastro de Transportadoras">
-      <ul><li><strong>Veículos</strong></li></ul>
-      <img src="imagens/VEICULOS.png" alt="Cadastro de Veículos">
-      <ul><li><strong>Funcionários/Vendedores</strong></li></ul>
-      <img src="imagens/VENDEDOR.png" alt="Cadastro de Funcionários/Vendedores">
-    </ul>
-  </div>
+    <h2 class="titulo-sistema"><i class="fa-solid fa-brain"></i> Sistema SOLUÇÃO E.R.P</h2>
+        <div class="feature" id="cadastros">
+      <h3><i class="fa-solid fa-users"></i> Cadastro de Clientes, Fornecedores, Funcionários e Produtos/Serviços</h3>
 
-  <div class="feature">
-    <h3 id="vendas"><i class="fa-solid fa-cart-arrow-down"></i> Tela de Vendas</h3>
-     <ul><li><strong>Movimento de venda</strong></li></ul>
-      <img src="imagens/MOVIMENTOVENDA.png" alt="movimento venda">
-      <ul><li><strong>Venda PDV</strong></li></ul>
-      <img src="imagens/PDV.png" alt="venda pdv">
-    </ul>
-  </div>
+      <div id="clientes"></div>
+      <ul><li><strong>Cadastro de Clientes</strong></li></ul>
+      <img src="imagens/CLIENTESERP.png" alt="Cadastro de Clientes">
 
-  <div class="feature">
-    <h3 id="financeiro"><i class="fa-solid fa-money-bill-transfer"></i> Controle Financeiro</h3>
-    <ul><li><strong>Consultas na tela de contas a pagar</strong></li></ul>
-    <img src="imagens/APAGAR.png" alt="Contas a pagar">
-    <ul><li><strong>Consultas na tela de contas a receber</strong></li></ul>
-    <img src="imagens/ARECEBER.png" alt="Contas a receber">
-    <ul><li><strong>Baixas de parcelas</strong></li></ul>
-    <img src="imagens/BAIXAPARCELA.png" alt="Baixa de parcela">
-    <ul><li><strong>Impressão de recibos</strong></li></ul>
-    <img src="imagens/recibo.png" alt="recibo">
-    <ul><li><strong>Controle de caixa com lançamentos (suprimento) e retiradas (sangria)</strong></li></ul>
-    <img src="imagens/CONTROLECAIXA.png" alt="CAIXA">
-    <ul><li><strong>Relatório de caixa</strong></li></ul>
-    <img src="imagens/CAIXA.png" alt="financeiro">
-    <ul><li><strong>Relatório financeiro com recebimentos/pagamentos por período</strong></li></ul>
-    <img src="imagens/FINANCEIRO.png" alt="financeiro">
-  </div>
+      <div id="fornecedores"></div>
+      <ul><li><strong>Cadastro de Fornecedores</strong></li></ul>
+      <img src="imagens/FORNECEDORERP.png" alt="Cadastro de Fornecedores">
 
-  <div class="feature">
-    <h3 id="faturamento"><i class="fa-solid fa-shop"></i> Opções de Faturamento</h3>
-    <li><strong>Venda</strong></li></ul>
-    <img src="imagens/VENDA.png" alt="venda">
-    <ul><li><strong>Orçamento</strong></li></ul>
-    <img src="imagens/ORCAMENTO.png" alt="Orçamento">
-    <ul><li><strong>Pedido</strong></li></ul>
-    <img src="imagens/PEDIDO.png" alt="pedido">
-    <ul><li><strong>Ordem de Serviço</strong></li></ul>
-    <img src="imagens/ORDEM DE SERVIÇO.png" alt="ordem de serviço">
-    <ul><li><strong>Outros</strong></li></ul>
-    <img src="imagens/OUTROS.png" alt="venda">
-  </div>
+      <div id="funcionarios"></div>
+      <ul><li><strong>Cadastro de Funcionários</strong></li></ul>
+      <img src="imagens/FUNCIONÁRIOERP.png" alt="Cadastro de Funcionários">
 
-  <div class="feature">
-    <h3 id="notas"><i class="fa-solid fa-copy"></i> Tipos de Notas Emitidas</h3>
-     <p>Emissão de NFE, NFCE, MDFE, CTE/CTE-OS e SAT/CF-e.</p>
-    <img src="imagens/NOTAS.png" alt="Notas Emitidas">
-  </div>
-  <div class="feature" id="app">
-      <h3><i class="fa-solid fa-mobile-screen-button"></i> Acesso pelo celular</h3>
-      <p>Acesso ao sistema via App Android ou IOS.</p>
-      <img src="imagens/appff.png" alt="app" class="imagem-app"/>
+      <div id="produtos"></div>
+      <ul><li><strong>Cadastro de Produtos/Serviços</strong></li></ul>
+      <img src="imagens/PRODUTOERP.png" alt="Cadastro de Produtos">
     </div>
 
-  <div class="feature">
-    <h3 id="estoque"><i class="fa-solid fa-boxes-stacked"></i> Controle de Estoque</h3>
-    <p>O controle de estoque é considerado básico. É possível cadastrar a quantidade de cada produto e, conforme as vendas forem realizadas, o sistema abate automaticamente a quantidade vendida. Também há um relatório de produtos com:</p>
-    <ul>
-      <li>Quantidade em estoque</li>
-      <li>Valor de custo e valor total de custo</li>
-      <li>Valor de venda e valor total de venda</li>
-      <img src="imagens/estoque.png" alt="estoque">
-    </ul>
-  </div>
+    <div class="feature" id="busca">
+      <h3><i class="fa-solid fa-map-location-dot"></i> Busca de Endereço e Dados Cadastrais</h3>
+      <div id="cep"></div>
+      <ul><li><strong>Busca por CEP</strong></li></ul>
+      <img src="imagens/BUSCACEP.gif" alt="Busca por CEP">
 
-  <div class="feature">
-    <h3 id="entrada"><i class="fa-solid fa-file-arrow-down"></i> Entrada de Produtos</h3>
-    <li><strong>Pela tela de movimento (ENTRADA), COMPRA – inserção manual dos produtos e valores</strong></li></ul>
-    <img src="imagens/compra.png" alt="compra">
-    <li><strong>Pela tela de cadastro de produtos – inserção de produtos e estoque via XML (usado apenas se os produtos ainda não estiverem cadastrados)</strong></li></ul>
-    <img src="imagens/importar.png" alt="importar">
-  </div>
-  <div class="feature">
-    <h3 id="nfrecebidas"><i class="fa-solid fa-file-arrow-down"></i> Tela de Notas Recebidas</h3>
-    <p>Possibilita visualizar, baixar, imprimir e dar ciência da operação sobre as notas que foram emitidas para o CNPJ da empresa.</p>
-    <img src="imagens/NOTASRECEBIDAS.png" alt="compra">
+      <div id="cpfcnpj"></div>
+      <ul><li><strong>Busca por CPF/CNPJ</strong></li></ul>
+      <img src="imagens/BUSCACPF.gif" alt="Busca por CPF/CNPJ">
+    </div>
+
+    <div class="feature" id="boletos">
+      <h3><i class="fa-solid fa-barcode"></i> Emissão de Boletos</h3>
+      <p><strong>Integração com diversos bancos:</strong></p>
+      <ul>
+        <li>SICREDI</li>
+        <li>ITAÚ</li>
+        <li>BANCO DO BRASIL</li>
+        <li>SANTANDER</li>
+        <li>CAIXA ECONÔMICA FEDERAL</li>
+        <li>SICOOB</li>
+        <li>BRADESCO</li>
+        <li>SAFRA</li>
+        <li>EFI</li>
+        <li>CRESOL</li>
+        <li>CREDISIS</li>
+      </ul>
+      <p><strong>Função de envio automático disponível apenas para o BANCO DO BRASIL, BANCRO SICREDI, BANCO EFI E BANCO SANTANDER.</strong></p>
+    </div>
+
+    <div class="feature" id="financeiro">
+      <h3><i class="fa-solid fa-money-bill-transfer"></i> Controle Financeiro Completo</h3>
+
+      <div id="despesas"></div>
+      <ul><li><strong>Despesas com centro de custo/plano de contas</strong></li></ul>
+      <img src="imagens/DESPESA.gif" alt="Despesas">
+
+      <div id="caixa"></div>
+      <ul><li><strong>Controle de caixa</strong></li></ul>
+      <img src="imagens/CAIXA.png" alt="Caixa">
+
+      <div id="receber"></div>
+      <ul><li><strong>Contas à receber</strong></li></ul>
+      <img src="imagens/ARECEBER.png" alt="A receber">
+
+      <div id="pagar"></div>
+      <ul><li><strong>Contas à pagar com agrupamento de parcelas</strong></li></ul>
+      <img src="imagens/APAGAR.png" alt="A pagar">
+
+      <div id="remessa"></div>
+      <ul><li><strong>Remessa bancária</strong></li></ul>
+      <img src="imagens/REMESSA.png" alt="Remessa">
+
+      <div id="retorno"></div>
+      <ul><li><strong>Retorno bancário</strong></li></ul>
+      <img src="imagens/RETORNO.png" alt="Retorno">
+
+      <div id="relatorios"></div>
+      <ul><li><strong>Relatórios financeiros</strong></li></ul>
+      <img src="imagens/FINANCEIRO.png" alt="Financeiro">
+
+      <div id="dre"></div>
+      <ul><li><strong>D.R.E</strong></li></ul>
+      <img src="imagens/DRE.png" alt="DRE">
+    </div>
+
+    <div class="feature" id="creditos">
+      <h3><i class="fa-solid fa-hand-holding-dollar"></i> Lançamento de Créditos</h3>
+      <p>Permite lançar créditos tanto para clientes quanto para fornecedores.</p>
+      <img src="imagens/CREDITO.png" alt="Créditos">
+    </div>
+        <div class="feature" id="notas">
+      <h3><i class="fa-solid fa-copy"></i></span> Tipos de Notas Emitidas</h3>
+      <p>Emissão de NFE, NFCE, MDFE, CTE/CTE-OS e Nota de Importação.</p>
+      <img src="imagens/NOTAS.png" alt="Notas Emitidas">
+    </div>
+
+    <div class="feature" id="importacao">
+      <h3><i class="fa-solid fa-file-arrow-down"></i> Importação de Notas de Entrada</h3>
+      <p>Busca automática de notas emitidas para o CNPJ da empresa, com download de XML, geração de compra, manifestação e escrituração.</p>
+      <img src="imagens/NOTASENTRADA.gif" alt="Importação de Notas">
+    </div>
+
+    <div class="feature" id="multiplos">
+      <h3><i class="fa-solid fa-layer-group"></i> Geração de Notas para Múltiplos Pedidos</h3>
+      <p>Permite selecionar várias vendas e gerar uma única nota fiscal.</p>
+      <img src="imagens/MULTIPLOSPEDIDOS.png" alt="Notas Múltiplas">
+    </div>
+    <div class="feature" id="arquivos">
+      <h3><i class="fa-solid fa-paper-plane"></i> Envio de arquivos:</h3>
+      <p>Envio de arquivos por Whatsapp ou por E-mail.</p>
+      <img src="imagens/arquivos.gif" alt="arquivos">
+    </div>
+    <div class="feature" id="app">
+      <h3><i class="fa-solid fa-mobile-screen-button"></i> Acesso pelo celular</h3>
+      <p>Acesso ao sistema via App Android ou IOS.</p>
+      <img src="imagens/app.png" alt="app" class="imagem-app"/>
+    </div>
+
+    <div class="feature" id="estoque">
+      <h3><i class="fa-solid fa-boxes-stacked"></i> Contagem e Alimentação de Estoque</h3>
+      <ul><li><strong>Contagem de estoque</strong></li></ul>
+      <img src="imagens/CONTAGEM.png" alt="Contagem de Estoque">
+      <ul><li><strong>Compras</strong></li></ul>
+      <img src="imagens/COMPRA.png" alt="Compras">
+      <ul><li><strong>Movimentações</strong></li></ul>
+      <img src="imagens/MOVIMENTAÇÃO.png" alt="Movimentações">
+    </div>
+
+    <div class="feature" id="minimo">
+      <h3><i class="fa-solid fa-triangle-exclamation"></i> Controle de Estoque Mínimo</h3>
+      <p>Alertas de estoque mínimo ao fechar vendas e emissão de relatórios específicos.</p>
+      <img src="imagens/ESTOQUEMINIMO.png" alt="Estoque Mínimo">
+    </div>
+
+    <div class="feature" id="composto">
+      <h3><i class="fa-solid fa-shapes"></i> Produto Composto e Industrialização</h3>
+      <ul><li><strong>Produto Composto</strong></li></ul>
+      <img src="imagens/PRODUTOCOMPOSTO.gif" alt="Produto Composto">
+      <div id="industrializacao"></div>
+      <ul><li><strong>Industrialização</strong></li></ul>
+      <img src="imagens/INDUSTRIALIZAÇÃO.gif" alt="Industrialização">
+    </div>
+
+    <div class="feature" id="tabela">
+      <h3><i class="fa-solid fa-dollar-sign"></i> Tabela de Preços</h3>
+      <p>Cadastro de múltiplos preços por produto, com seleção conforme necessidade.</p>
+      <img src="imagens/TABELA.png" alt="Tabela de Preços">
+    </div>
+    <div class="feature" id="vendas">
+    <h3><i class="fa-solid fa-cart-arrow-down"></i></i> Venda PDV</h3>
+      <img src="imagens/PDV.png" alt="pdv">
+    </div>
+
+    <div class="feature" id="consignada">
+      <h3><i class="fa-solid fa-handshake"></i> Venda Consignada</h3>
+      <p>Controle de consignado por movimentação de produtos (remessa à vender).</p>
+      <img src="imagens/CONSIGNADA.png" alt="Venda Consignada">
+    </div>
+
+    <div class="feature" id="futura">
+      <h3><i class="fa-solid fa-hourglass-start"></i> Venda Futura</h3>
+      <p>Permite realizar baixas parciais de produtos vendidos e emitir NFE por entrega.</p>
+      <img src="imagens/VENDAFUTURA.png" alt="Venda Futura">
+    </div>
+        <div class="feature" id="rota">
+      <h3><i class="fa-solid fa-truck-ramp-box"></i> Rota de Entregas</h3>
+      <p>Organização de entregas por região, com definição de veículo, funcionário e impressão de romaneio.</p>
+      <img src="imagens/ROTA.png" alt="Rota de Entregas">
+    </div>
+
+    <div class="feature" id="etiquetas">
+      <h3><i class="fa-solid fa-tags"></i> Etiquetas Personalizadas</h3>
+      <p>Geração e customização de etiquetas conforme a necessidade do cliente.</p>
+      <img src="imagens/ETIQUETAS.png" alt="Etiquetas">
+    </div>
+
+    <div class="feature" id="aniversariantes">
+      <h3><i class="fa-solid fa-cake-candles"></i> Controle de Aniversariantes</h3>
+      <p>Relatórios mensais e alertas automáticos ao fazer login no sistema.</p>
+      <img src="imagens/ANIVERSARIANTES2.png" alt="Aniversariantes 2">
+      <img src="imagens/ANIVERSARIANTES.png" alt="Aniversariantes">
+    </div>
+
+    <div class="feature" id="executor">
+      <h3><i class="fa-solid fa-screwdriver-wrench"></i> Executor de Serviço</h3>
+      <p>Identificação do funcionário responsável por cada serviço e relatório detalhado por período.</p>
+      <img src="imagens/EXECUTOR.png" alt="Executor">
+      <img src="imagens/EXECUTOR2.png" alt="Executor 2">
+    </div>
+
     
-  </div>
 
-  <div class="feature">
-    <h3 id="xml"><i class="fa-solid fa-upload"></i> Envio de XML para o Contador</h3>
-    <ul><li><strong>Pelo site FISCAL FÁCIL, através do menu “CONTÁBIL”</strong></li></ul>
-    <img src="imagens/XML.png" alt="CONTÁBIL"/>
-    <ul><li><strong>Pelo site <strong>www.portaldocontador.com</strong></li></ul>
-    <img src="imagens/PORTAL.png" alt="PORTAL">
-  </div>
+    <div class="feature" id="contratos">
+      <h3><i class="fa-solid fa-file-invoice-dollar"></i> Contratos e Mensalidades</h3>
+      <p>Geração de contratos e parcelas mensais para clientes.</p>
+      <img src="imagens/CONTRATO.png" alt="Contrato">
+      <img src="imagens/GERARPARCELA.png" alt="Parcelas">
+    </div>
 
-  <div class="feature">
-    <h3 id="publico"><i class="fa-solid fa-users-viewfinder"></i> Público-Alvo</h3>
-    <p>O sistema FISCAL FÁCIL é voltado para pequenas e médias empresas que buscam agilidade e menos burocracia, sem abrir mão de controle e gestão do negócio.</p>
-  </div>
-</section>
+    <div class="feature" id="pontuacao">
+      <h3><i class="fa-solid fa-star"></i> Pontuação de Clientes</h3>
+      <p><strong>Configuração de pontos para geração de cashback visando a fidelização dos clientes.</strong></p>
+      <img src="imagens/PONTOS.gif" alt="PONTOS">
+    </div>
+
+    <div class="feature" id="vendasrel">
+      <h3><i class="fa-solid fa-chart-line"></i> Relatórios de Vendas e Margem de Lucro</h3>
+      <ul>
+        <li><strong>Vendas por período</strong></li>
+        <img src="imagens/VENDASPERIODO.png" alt="Vendas por Período">
+        <li><strong>Vendas e margem de lucro</strong></li>
+        <img src="imagens/MARGEMELUCRO.png" alt="Margem de Lucro">
+        <li><strong>Produtos vendidos</strong></li>
+        <img src="imagens/PRODUTOSVENDIDOS.png" alt="Produtos Vendidos">
+        <li><strong>Produtos mais vendidos</strong></li>
+        <img src="imagens/PRODUTOSMAISVENDIDOS.png" alt="Mais Vendidos">
+        <li><strong>Curva ABC</strong></li>
+        <img src="imagens/CURVABC.png" alt="Curva ABC">
+        <li><strong>Vendas por funcionário</strong></li>
+        <img src="imagens/VENDAFUNCIONARIO.png" alt="Vendas por Funcionário">
+        <li><strong>Produtos sem movimentação</strong></li>
+        <img src="imagens/SEMMOVIMENTACAO.png" alt="Sem Movimentação">
+        <li><strong>Análise do cliente (últimas 3 compras)</strong></li>
+        <img src="imagens/ANALISECLIENTE.png" alt="Análise do Cliente">
+      </ul>
+    </div>
+
+    <div class="feature" id="publico">
+      <h3><i class="fa-solid fa-users-viewfinder"></i> Público-Alvo</h3>
+      <p><strong>O sistema SOLUÇÃO ERP é voltado para empresários mais exigentes que necessitam de maior controle e gestão do seu negócio e que não abrem mão de agilidade e eficiência.</strong></p>
+    </div>
+  </section>
 </div>
-<div class="cardff-wrapper">
-  <aside class="cardff-card">
-    <a class="cardff-link" href="https://www.sucessonaempresa.com/blog/categories/fiscal-facil" target="_blank">FISCAL FÁCIL</a>
+<div class="erp-wrapper">
+  <aside class="erp-card">
+    <a class="ERP" href="https://www.sucessonaempresa.com/blog/categories/solu%C3%A7%C3%A3o-e-r-p" target="_blank">SOLUÇÃO ERP</a>
     <p>A partir de</p>
-    <p class="cardff-price">R$ 99,90 por mês</p>
-    <a class="cardff-cta" href="https://wa.me/5591981225089?text=Olá!%20Tenho%20interesse%20no%20Fiscal%20Fácil." target="_blank">
+    <p class="price">R$ 249,00 por mês</p>
+    <a class="cta" href="https://wa.me/5591981225089?text=Olá!%20Tenho%20interesse%20no%20Solução%20ERP." target="_blank">
       Fale com um especialista!
     </a>
     <ul>
-      <li>Sistema 100% em nuvem</li>
-      <li>Sem fidelidade</li>
-      <li>Emissão de notas fiscais</li>
-      <li>Controle de caixa</li>
+      <li>Zero implantação e sem fidelidade</li>
+      <li>Pesquisa CNPJ e CPF</li>
+      <li>Sistema em nuvem</li>
+      <li>Múltiplas empresas</li>
       <li>Aplicativo para celular</li>
+      <li>Arquivo SPED Fiscal</li>
       <li>Suporte personalizado</li>
-      
     </ul>
   </aside>
 </div>
- <footer>
+
+
+
+  <footer>
     <p>© 2025 SOLUÇÃO SISTEMAS – Todos os direitos reservados.</p>
   </footer>
 <script>
-  const menuToggle = document.getElementById('menu-toggle');
-  const nav = document.getElementById('indice');
-  const body = document.body;
-  
+    
 
-  // Abre/fecha o menu ao clicar no botão ☰
-  menuToggle.addEventListener('click', () => {
-    nav.classList.toggle('open');
-    body.classList.toggle('menu-open');
-  });
+  function toggleMenu() {
+  const menu = document.getElementById('indice');
+  menu.classList.toggle('open');
+  document.body.classList.toggle('menu-open');
+}
 
-  // Fecha o menu ao clicar em um link do menu
-  document.querySelectorAll('#indice a').forEach(link => {
-    link.addEventListener('click', () => {
-      nav.classList.remove('open');
-      body.classList.remove('menu-open');
-    });
-  });
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
-  // Fecha o menu ao clicar fora dele
-  document.addEventListener('click', function (e) {
-    if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
-      nav.classList.remove('open');
-      body.classList.remove('menu-open');
-    }
-  });
-
-  // Ajusta altura do menu com base no cabeçalho
   window.addEventListener('load', () => {
+    // Ajusta o topo do menu lateral com base na altura do header
     const header = document.querySelector('header');
+    const nav = document.getElementById('indice');
     if (header && nav) {
       const headerHeight = header.offsetHeight;
       nav.style.top = headerHeight + 'px';
       nav.style.height = `calc(100% - ${headerHeight}px)`;
     }
+
+    // Fecha o menu ao clicar em um link
+    const menu = document.getElementById('indice');
+    const menuToggle = document.getElementById('menu-toggle');
+
+    menu.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A') {
+        menu.classList.remove('open');
+        document.body.classList.remove('menu-open');
+      }
+    });
+
+    // Fecha o menu ao clicar fora
+    document.addEventListener('click', function (e) {
+      const isClickInsideMenu = menu.contains(e.target);
+      const isClickOnToggle = menuToggle.contains(e.target);
+
+      if (!isClickInsideMenu && !isClickOnToggle) {
+        menu.classList.remove('open');
+        document.body.classList.remove('menu-open');
+      }
+    });
+
+    // ERP toggle
+    const erpWrapper = document.querySelector('.erp-wrapper');
+    const erpToggle = document.getElementById('erp-toggle');
+    const erpIcon = erpToggle.querySelector('i');
+
+    function toggleERP() {
+      erpWrapper.classList.toggle('open');
+
+      // Troca o ícone
+      if (erpWrapper.classList.contains('open')) {
+        erpIcon.classList.remove('fa-dollar-sign');
+        erpIcon.classList.add('fa-xmark');
+      } else {
+        erpIcon.classList.remove('fa-xmark');
+        erpIcon.classList.add('fa-dollar-sign');
+      }
+    }
+
+    // Atribui a função ao botão
+    erpToggle.addEventListener('click', function (e) {
+      e.stopPropagation(); // Impede que o clique feche imediatamente
+      toggleERP();
+    });
+
+    // Fecha o card ERP ao clicar fora
+    document.addEventListener('click', function (e) {
+      if (window.innerWidth <= 768) {
+        const isClickInsideCard = erpWrapper.contains(e.target);
+        const isClickOnButton = erpToggle.contains(e.target);
+
+        if (!isClickInsideCard && !isClickOnButton && erpWrapper.classList.contains('open')) {
+          erpWrapper.classList.remove('open');
+          erpIcon.classList.remove('fa-xmark');
+          erpIcon.classList.add('fa-dollar-sign');
+        }
+      }
+    });
+
+    // Garante que a página comece no topo
     window.scrollTo(0, 0);
   });
-
-  // Função para rolar para o topo
-  function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }
-  const cardffWrapper = document.querySelector('.cardff-wrapper');
-  const cardffToggle = document.getElementById('cardff-toggle');
-  const cardffIcon = cardffToggle.querySelector('i');
-  const cardffOverlay = document.getElementById('cardff-overlay');
-
-  {const cardffWrapper = document.querySelector('.cardff-wrapper');
-  const cardffToggle = document.getElementById('cardff-toggle');
-  const cardffIcon = cardffToggle.querySelector('i');
-
-  function toggleCardFF() {
-    const isOpen = cardffWrapper.classList.toggle('open');
-
-    // Troca o ícone
-    cardffIcon.classList.toggle('fa-dollar-sign', !isOpen);
-    cardffIcon.classList.toggle('fa-xmark', isOpen);
-  }
-
-  function closeCardFF() {
-    cardffWrapper.classList.remove('open');
-    cardffIcon.classList.remove('fa-xmark');
-    cardffIcon.classList.add('fa-dollar-sign');
-  }
-
-  // Clique no botão
-  cardffToggle.addEventListener('click', function (e) {
-    e.stopPropagation();
-    toggleCardFF();
-  });
-
-  // Clique fora do card fecha
-  document.addEventListener('click', function (e) {
-    const isInsideCard = cardffWrapper.contains(e.target);
-    const isButton = cardffToggle.contains(e.target);
-
-    if (!isInsideCard && !isButton && cardffWrapper.classList.contains('open')) {
-      closeCardFF();
-    }
-  });
-}
-const btnTopo = document.getElementById('btn-topo');
+  const btnTopo = document.getElementById('btn-topo');
 
 // Mostra botão ao rolar
 window.addEventListener('scroll', () => {
@@ -712,8 +951,6 @@ window.addEventListener('scroll', () => {
 btnTopo.addEventListener('click', () => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 });
-
-
 </script>
 </body>
 </html>
